@@ -32,3 +32,7 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
+
+// HTML ENDPOINT //
+
+app.get("/", (req, res) => res.send("<h1>Wayfarer API</h1>"));
