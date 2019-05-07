@@ -36,3 +36,7 @@ app.use(cors(corsOptions));
 // HTML ENDPOINT //
 
 app.get("/", (req, res) => res.send("<h1>Wayfarer API</h1>"));
+
+// START SERVER //
+
+app.listen(PORT, () => console.log(`Server started on ${PORT}`));
