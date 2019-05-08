@@ -31,6 +31,7 @@ router.delete("/:postId", async (req, res) => {
   try {
     let post = await Post.findById(req.params.postId);
     if (post.userId.toString() === req.session.currentUser) {
+      let deletedPost = await post.deleteOne();
     }
   } catch (err) {
     console.error(err);
